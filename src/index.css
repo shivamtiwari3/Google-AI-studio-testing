@@ -1,0 +1,45 @@
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@400;600;700&family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&display=swap');
+@import "tailwindcss";
+
+@theme {
+  --font-sans: "Outfit", ui-sans-serif, system-ui, sans-serif;
+  --font-serif: "Libre Baskerville", serif;
+  
+  --color-primary: #FFD700;
+  --color-secondary: #FF6B6B;
+  --color-accent: #4D96FF;
+  --color-success: #6BCB77;
+}
+
+@layer base {
+  body {
+    @apply bg-[#FFFBEB] text-[#2D3436] font-sans overflow-x-hidden;
+  }
+}
+
+.story-card {
+  perspective: 1500px;
+}
+
+.book-shadow {
+  box-shadow: 0 10px 30px -5px rgba(0, 0, 0, 0.1), 0 20px 60px -10px rgba(0, 0, 0, 0.1);
+}
+
+.glass-panel {
+  background: rgba(255, 255, 255, 0.8);
+  backdrop-filter: blur(8px);
+  border: 1px solid rgba(255, 255, 255, 0.3);
+}
+
+/* Markdown styling */
+.prose p {
+  @apply mb-4 leading-relaxed;
+}
+
+.prose strong {
+  @apply text-accent font-bold;
+}
+
+.prose em {
+  @apply text-secondary italic;
+}
